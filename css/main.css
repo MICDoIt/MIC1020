@@ -1,0 +1,592 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+/*--
+Color scheme:
+#yellow: #FFA401>#FFB401>#FFC401>#FFD401
+#white:#FFF
+#dark grey: #404040>#808080
+
+*/
+
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { 
+	font-family: Microsoft YaHei, Microsoft JhengHei, Heiti TC, PingFang,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53",  sans-serif;
+	color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: #FFC401;
+}
+
+a:hover {
+  color: #FFC401;
+  text-decoration: none;
+}
+
+.tooltip .tooltip-inner{color:#FFC401;}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  top: 0px;
+  height: 70px;
+  padding: 10px 0;
+  z-index: 999;  
+  background: #404040;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 100px;
+}
+
+#header.header-transparent {
+  background: transparent;
+}
+
+#header.header-scrolled {
+  top: 0;
+  background: #404040;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  height: 100px;
+  padding: 20px 0;
+  background: #404040;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;  
+}
+
+#footer span {
+  color: #FFA401;
+  font-weight: 600;
+}
+
+#footer h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFA401;
+  position: relative;    
+}
+
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;  
+  visibility: hidden;
+  opacity: 0;
+  z-index: 996;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;  
+  background: #FFA401;  
+}
+
+.back-to-top i {
+  font-size: 20px;
+  color: #FFF;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #FFD401;
+  color: #FFF;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Navigation.menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFF;
+  white-space: nowrap;  
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #FFC401;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #FFF;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;  
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #404040;  
+  z-index: 0;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #FFF;
+  overflow-y: auto;  
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #404040;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #FFC401;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #404040;
+  overflow: hidden;
+  padding: 0;
+}
+
+#hero .carousel-item {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hero .carousel-item::before {
+  content: "";
+  background-color: rgba(12, 11, 10, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .carousel-content {
+  text-align: center;
+}
+
+#hero h4 {
+  color: #FFC401;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#hero h4 span {
+  color: #FFC401;
+}
+
+#hero p {
+  width: 80%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  color: #FFC401;
+}
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-next-icon,
+#hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 30px;
+  line-height: 0;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero .carousel-control-next-icon:hover,
+#hero .carousel-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hero .carousel-indicators li {
+  cursor: pointer;
+}
+
+#hero .btn-menu,
+#hero .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 0 10px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  color: #fff;
+  border: 2px solid #FFC401;
+}
+
+#hero .btn-menu:hover,
+#hero .btn-book:hover {
+  background: #FFC401;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero p {
+    width: 50%;
+  }
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #FFF;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #808080;
+}
+
+.section-title h2 span {
+  color: #FFC401;
+}
+
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 300;
+}
+
+@media (min-width: 1024px) {
+  .section-title p {
+    width: 50%;
+  }
+}
+
+/*--------------------------------------------------------------
+#.members
+--------------------------------------------------------------*/
+
+.members .member {
+  text-align: center;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.members .member .member-info {
+  position: absolute;
+  bottom: -100px;
+  left: 0px;
+  right: 0px;
+  background: #FFF;
+  padding: 10px 0;
+  color: #404040;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;  
+}
+
+.members .member h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #808080;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.members .member h4::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 1px;
+  background: #FFC401;
+  bottom: 0;
+  left: calc(50% - 125px);
+}
+
+.members .member .social {
+  margin-top: 15px;
+}
+
+.members .member .social a {  
+  color: #808080;
+}
+
+.members .member .social a:hover {
+  color: #FFC401;  
+}
+
+
+.members .member .social i {
+  font-size: 24px;
+  margin: 0 2px;
+}
+
+@media (max-width: 992px) {
+  .members .member {
+    margin-bottom: 110px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .members {
+    background-attachment: fixed;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# Award Section
+--------------------------------------------------------------*/
+
+.award .award-content {
+  margin-top: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.award .award-content::after {
+  content: "......................................................................""....................................................................""....................................................................";
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: -4px;
+  z-index: 1;
+  color: #808080;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.award .award-content a {
+  padding-right: 10px;
+  background: #FFF;
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  color: #FFB401;
+}
+
+.award .award-content span {
+  color: #404040;	
+  background: #FFF;
+  position: relative;
+  z-index: 3;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.award .award-remarks {
+  font-style: italic;
+  font-size: 14px;
+  font-family: "Comic Neue", sans-serif;
+  color: #808080;
+}
+
+/*--------------------------------------------------------------
+# Resources Section
+--------------------------------------------------------------*/
+
+.table thead th  {
+   position: sticky;
+  color: #FFF;
+  background-color: #808080;
+}
+
+.table tbody   {
+	 position: sticky;
+  
+}
+
+.table tbody td  {
+  color: #404040;  
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   color: #404040;  
+ }
+ 
+ .table-hover tbody tr:hover {
+  /*background-color: #FFC401;*/
+}
+
+.resources .resources-content {
+  color: #404040;      
+  font-size: 16px;    
+}
+
+.resources .resources-remarks {
+  font-style: italic;
+  font-size: 14px;  
+  color: #808080;
+}
+
