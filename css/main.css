@@ -590,3 +590,57 @@ section {
   color: #808080;
 }
 
+/*--------------------------------------------------------------
+# media
+--------------------------------------------------------------*/
+
+.media .media-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #FFC401;
+  position: relative;
+  color: #404040;
+}
+
+.media .media-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #FFC401;
+  margin-bottom: 10px;
+}
+
+.media .media-item h5 {
+  font-size: 16px;
+  background: #FFC401;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #FFF;
+}
+
+.media .media-item ul {
+  padding-left: 20px;
+}
+
+.media .media-item ul li {
+  padding-bottom: 10px;
+}
+
+.media .media-item:last-child {
+  padding-bottom: 0;
+}
+
+.media .media-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #FFC401;
+}
